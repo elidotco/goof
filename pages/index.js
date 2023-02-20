@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { About, Feature, Header } from "../components";
+import { About, Feature, Header, Reviews, Screenshots } from "../components";
 import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
 
@@ -14,8 +14,10 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      {/* <About /> */}
+      <About />
       <Feature />
+      <Screenshots />
+      <Reviews />
     </div>
   );
 }

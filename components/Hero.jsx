@@ -32,7 +32,7 @@ const Hero = () => {
                 className="flex-row flex items-center justify-between gap-x-2"
               >
                 <AiFillApple />
-                Appsore
+                Appstore
               </a>
             </div>
             <div
@@ -45,7 +45,7 @@ const Hero = () => {
                 className="flex-row flex items-center justify-between gap-x-2"
               >
                 <IoLogoGooglePlaystore />
-                PLayStore
+                PlayStore
               </a>
             </div>
           </div>
