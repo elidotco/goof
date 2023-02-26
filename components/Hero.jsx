@@ -11,15 +11,18 @@ const Hero = () => {
       </div>
 
       <div
-        className="flex  items-center h-[700px] md:flex-row justify-between  flex-col px-5 "
+        className="flex  items-center h-full md:h-[700px] md:flex-row justify-between  flex-col px-5 "
         id="home"
       >
-        <div className="z-10  my-14">
+        <div className="z-10 w-full md:w-4/6 my-14">
           <p className="md:text-5xl text-3xl pt-20 animate__animated animate__backInLeft font-bold md:pl-20 md:px-20 text-white">
-            Book A Truck For your Waste Collection
+            Awesome App that suits the morden lifestyle
           </p>
-          <p className="lg:text-3xl text-xl py-2 animate__animated animate__backInLeft font-light text-white md:px-40 md:pl-20 ">
-            Book A Truck For your Waste Collection
+          <p className="py-2 animate__animated animate__backInLeft font-light text-white md:px-40 md:pl-20 ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            quis facere quae recusandae impedit odio enim ducimus doloremque rem
+            velit, minima, at vel, iure deleniti dolore nobis debitis aliquid
+            nesciunt!
           </p>
           <div className="mt-5 md:flex hidden  gap-10 ml-20">
             <div
@@ -36,8 +39,8 @@ const Hero = () => {
               </a>
             </div>
             <div
-              className="32 items-center h-12 flex flex-row  px-6 py-3 
-                 rounded-full border text-white text-xl
+              className="32 items-center border h-12 flex flex-row  px-6 py-3 
+                 rounded-full   text-white text-xl
               "
             >
               <a

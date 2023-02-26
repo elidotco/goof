@@ -35,16 +35,21 @@ const Header = () => {
       path: "/#home",
     },
     {
-      name: "Features",
+      name: "About us",
       path: "/#features",
     },
+
     {
       name: "How it works",
       path: "/#how-it-works",
     },
     {
-      name: "Contact Us",
-      path: "/#contact",
+      name: "Screenshots",
+      path: "/#screenshots",
+    },
+    {
+      name: "Testimonials",
+      path: "/#reviews",
     },
   ];
   return (
@@ -132,7 +137,7 @@ const Header = () => {
                       <div className="icons flex flex-col gap-5 my-5 ">
                         <a
                           href="#"
-                          className="flex flex-row items-center border rounded-md border-green-500 px-1 py-1 mb-10 text-green-600 text-2xl gap-1"
+                          className="flex flex-row items-center   rounded-md  -green-500 px-1 py-1 mb-10 text-green-600 text-2xl gap-1"
                         >
                           <FaGooglePlay />
                           <span className="text-xl font-semibold">
@@ -141,7 +146,7 @@ const Header = () => {
                         </a>
                         <a
                           href="#"
-                          className="flex flex-row items-center font-bold border rounded-md border-green-500 px-1 py-1 text-green-600 text-2xl gap-1"
+                          className="flex flex-row items-center font-bold   rounded-md  -green-500 px-1 py-1 text-green-600 text-2xl gap-1"
                         >
                           <FaAppStore />
                           <span className="text-xl font-semibold">
@@ -153,7 +158,7 @@ const Header = () => {
                       <div className="mt-4">
                         <button
                           type="button"
-                          className="inline-flex absolute top-2 right-2 justify-center rounded-full border border-transparent bg-blue-100 px-2 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                          className="inline-flex absolute top-2 right-2 justify-center rounded-full    -transparent bg-blue-100 px-2 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                           onClick={closeModal}
                         >
                           <XMarkIcon className="w-8 h-8 text-black mx-5" />

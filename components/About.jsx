@@ -18,8 +18,8 @@ const About = () => {
   };
   return (
     <div>
-      <div className="flex flex-row my-10 px-10 h-full">
-        <div className="images w-full md:w-3/6 h-full border">
+      <div className="flex flex-col-reverse md:flex-row my-10 lg:px-10 px-5 h-full">
+        <div className="images w-full md:w-3/6 h-full  ">
           <Gallery photos={photos} onClick={openLightbox} />
           <ModalGateway>
             {viewerIsOpen ? (
@@ -36,7 +36,7 @@ const About = () => {
             ) : null}
           </ModalGateway>
         </div>
-        <div className="images w-full md:w-3/6 h-full border px-10 py-5">
+        <div className="images w-full md:w-3/6 h-full   px-5 md:px-10 py-5">
           <div>
             <span
               className="text-4xl font-bold
@@ -47,8 +47,7 @@ const About = () => {
             <div className="w-12 h-1 bg-orange-500" />
           </div>
           {/* Passage Section */}
-
-          <div className="p-5">
+          <div className="md:p-5">
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Voluptate dicta sed dignissimos, cum est corrupti, mollitia

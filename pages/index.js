@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 import { About, Feature, Header, Reviews, Screenshots } from "../components";
+import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
 
@@ -18,6 +20,8 @@ export default function Home() {
       <Feature />
       <Screenshots />
       <Reviews />
+      <Contact />
+      <Footer />
     </div>
   );
 }

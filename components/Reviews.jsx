@@ -9,7 +9,7 @@ import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 
 const Reviews = () => {
   return (
-    <div className="w-full h-[700px] bg-gray-200">
+    <div id="reviews" className="w-full h-[700px] bg-gray-200">
       <div className="flex justify-center flex-col pb-10 pt-20 items-center text-4xl font-bold">
         Our Clients Speak
         <p className="text-xl font-normal py-1">
@@ -18,7 +18,7 @@ const Reviews = () => {
         </p>
       </div>
 
-      <div className="py-5 px-10">
+      <div className="py-5 px-10 hidden md:flex">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
@@ -27,7 +27,7 @@ const Reviews = () => {
             dynamicBullets: true,
           }}
           autoplay={true}
-          className="mx-20 border"
+          className="mx-20  "
           // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
@@ -35,7 +35,7 @@ const Reviews = () => {
             return (
               <SwiperSlide key={item.name}>
                 <div className="w-full flex flex-col md:flex-row px-10  items-center justify-center">
-                  <div className="w-44 h-44 rounded-full shadow-md shadow-black border" />
+                  <div className="w-44 h-44 rounded-full shadow-md shadow-black  " />
                   <div className="p-2 md:w-3/5 w-full ">
                     {item.message}
                     <div>{item.name}</div>
@@ -45,7 +45,7 @@ const Reviews = () => {
             );
           })} */}
           <SwiperSlide className="rounded-lg">
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center border rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
               <div className="w-full h-56 rounded-lg bg-white shadow-md shadow-gray-200 flex items-center justify-center flex-col">
                 <p className="font-bold text-2xl ">Efficient Collaboration</p>
                 <p className="px-4">
@@ -58,7 +58,7 @@ const Reviews = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="rounded-lg">
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center border rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
               <div className="w-full h-56 rounded-lg bg-white shadow-md shadow-gray-200 flex items-center justify-center flex-col">
                 <p className="font-bold text-2xl ">Intuitive Design</p>
                 <p className="px-4">
@@ -71,7 +71,7 @@ const Reviews = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="rounded-lg">
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center border rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
               <div className="w-full h-56 rounded-lg bg-white shadow-md shadow-gray-200 flex items-center justify-center flex-col">
                 <p className="font-bold text-2xl ">Intuitive Design</p>
                 <p className="px-4">
@@ -84,8 +84,88 @@ const Reviews = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="rounded-lg">
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center border rounded-lg">
-              <div className="w-full h-56 rounded-lg bg-white border-black shadow-md shadow-gray-200 flex items-center justify-center flex-col">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
+              <div className="w-full h-56 rounded-lg bg-white  -black shadow-md shadow-gray-200 flex items-center justify-center flex-col">
+                <p className="font-bold text-2xl ">Intuitive Design</p>
+                <p className="px-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente qui, alias suscipit necessitatibus quasi laborum
+                  provident voluptas aut maxime mollitia deserunt nesciunt
+                  inventore rem possimus ullam debitis magni id consequatur?
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="py-5 px-10  md:hidden">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+          spaceBetween={50}
+          slidesPerView={1}
+          pagination={{
+            dynamicBullets: true,
+          }}
+          autoplay={true}
+          className="mx-20  "
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
+          {/* {data?.map((item) => {
+            return (
+              <SwiperSlide key={item.name}>
+                <div className="w-full flex flex-col md:flex-row px-10  items-center justify-center">
+                  <div className="w-44 h-44 rounded-full shadow-md shadow-black  " />
+                  <div className="p-2 md:w-3/5 w-full ">
+                    {item.message}
+                    <div>{item.name}</div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })} */}
+          <SwiperSlide className="rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
+              <div className="w-full h-56 rounded-lg bg-white shadow-md shadow-gray-200 flex items-center justify-center flex-col">
+                <p className="font-bold text-2xl ">Efficient Collaboration</p>
+                <p className="px-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente qui, alias suscipit necessitatibus quasi laborum
+                  provident voluptas aut maxime mollitia deserunt nesciunt
+                  inventore rem possimus ullam debitis magni id consequatur?
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
+              <div className="w-full h-56 rounded-lg bg-white shadow-md shadow-gray-200 flex items-center justify-center flex-col">
+                <p className="font-bold text-2xl ">Intuitive Design</p>
+                <p className="px-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente qui, alias suscipit necessitatibus quasi laborum
+                  provident voluptas aut maxime mollitia deserunt nesciunt
+                  inventore rem possimus ullam debitis magni id consequatur?
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
+              <div className="w-full h-56 rounded-lg bg-white shadow-md shadow-gray-200 flex items-center justify-center flex-col">
+                <p className="font-bold text-2xl ">Intuitive Design</p>
+                <p className="px-4">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente qui, alias suscipit necessitatibus quasi laborum
+                  provident voluptas aut maxime mollitia deserunt nesciunt
+                  inventore rem possimus ullam debitis magni id consequatur?
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="rounded-lg">
+            <div className="w-full flex flex-col md:flex-row  items-center justify-center   rounded-lg">
+              <div className="w-full h-56 rounded-lg bg-white  -black shadow-md shadow-gray-200 flex items-center justify-center flex-col">
                 <p className="font-bold text-2xl ">Intuitive Design</p>
                 <p className="px-4">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.

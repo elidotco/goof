@@ -3,9 +3,9 @@ import React from "react";
 
 const Feature = () => {
   return (
-    <div className="w-full h-[700px] bg-green-400 text-white">
+    <div id="features" className="w-full h-full bg-green-400 text-white">
       <div className="flex flex-row">
-        <div className="w-full md:w-3/6 border h-full px-10">
+        <div className="w-full md:w-3/6   h-full px-10">
           <div className="my-10">
             <span className="text-3xl font-semibold ">
               How Does This App Work ?
@@ -42,9 +42,9 @@ const Feature = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-3/6">
+        <div className="w-full md:w-3/6 hidden md:flex">
           <div
-            className="w-4/5 h-5/6 border
+            className="w-4/5 h-5/6  
           "
           >
             <img src="/images/temp.png" alt="temp" className="w-full h-full" />

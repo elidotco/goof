@@ -16,7 +16,7 @@
   display: flex;
   flex: 1;
   padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
+  -top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
 }
@@ -58,7 +58,7 @@
 
 .code {
   background: #fafafa;
-  border-radius: 5px;
+  -radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
@@ -81,7 +81,7 @@
   text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease, -color 0.15s ease;
   max-width: 300px;
 }
 
@@ -89,7 +89,7 @@
 .card:focus,
 .card:active {
   color: #0070f3;
-  border-color: #0070f3;
+  -color: #0070f3;
 }
 
 .card h2 {
@@ -118,7 +118,7 @@
 @media (prefers-color-scheme: dark) {
   .card,
   .footer {
-    border-color: #222;
+    -color: #222;
   }
   .code {
     background: #111;
