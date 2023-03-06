@@ -18,6 +18,7 @@ a {
 
 * {
   box-sizing: -box;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {

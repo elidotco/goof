@@ -79,8 +79,8 @@ const Footer = () => {
       path: "/#home",
     },
     {
-      name: "Features",
-      path: "/#features",
+      name: "About Us",
+      path: "/#about",
     },
     {
       name: "How it works",
@@ -184,11 +184,12 @@ const Footer = () => {
         <div className="footer items-center justify-center flex flex-col py-10"></div>
         <div className="bg-black flex items-center flex-col px-10 gap-5 py-10 text-white md:justify-between md:flex-row">
           <div className="md:w-2/5 w-full">
-            <div>Logo</div>
+            <div className="px-5 flex items-center text-white uppercase font-bold text-2xl">
+              Go<span className="text-green-400">fo</span>od
+            </div>
             <div className="py-5">
               Go Waste is the brain child of Lac global limited as a means to
-              help keep the environment clean by providing ease access to waste
-              disposal visit{" "}
+              help Deliver health food Fast visit{" "}
               <a
                 href="www.lacgloballimited.com"
                 className="text-blue-400 cursor-pointer"
@@ -228,8 +229,8 @@ const Footer = () => {
               ))}
             </div>
             <div className="flex flex-col gap-2">
-              <a href="#">Become A Driver</a>
-              <a href="#">Become An Agency</a>
+              <a href="#"></a>
+              <a href="#">Partner with us</a>
               <a
                 href="https://www.lacgloballimited.com/projects/gowasteterms"
                 target="_blank"

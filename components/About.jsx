@@ -17,7 +17,7 @@ const About = () => {
     setViewerIsOpen(false);
   };
   return (
-    <div>
+    <div id="about">
       <div className="flex flex-col-reverse md:flex-row my-10 lg:px-10 px-5 h-full">
         <div className="images w-full md:w-3/6 h-full  ">
           <Gallery photos={photos} onClick={openLightbox} />

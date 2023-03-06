@@ -36,12 +36,12 @@ const Header = () => {
     },
     {
       name: "About us",
-      path: "/#features",
+      path: "/#about",
     },
 
     {
       name: "How it works",
-      path: "/#how-it-works",
+      path: "/#features",
     },
     {
       name: "Screenshots",
