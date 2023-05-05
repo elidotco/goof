@@ -5,8 +5,10 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
+import getBlogPosts, { getGallery } from "../servicees";
 
-export default function Home() {
+export default function Home({ gallery }) {
+  console.log(gallery[0].fields.pics);
   return (
     <div className="">
       <Head>
@@ -25,3 +27,9 @@ export default function Home() {
     </div>
   );
 }
+
+Home.getInitialProps = async () => {
+  const gallery = await getGallery();
+
+  return { gallery };
+};

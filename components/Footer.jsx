@@ -191,7 +191,7 @@ const Footer = () => {
               Go Waste is the brain child of Lac global limited as a means to
               help Deliver health food Fast visit{" "}
               <a
-                href="www.lacgloballimited.com"
+                href="https://www.lacgloballimited.com"
                 className="text-blue-400 cursor-pointer"
               >
                 {" "}

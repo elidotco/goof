@@ -19,9 +19,6 @@ const Header = () => {
     };
   }, []);
 
-  console.log(scrollTop);
-  console.log(isOpen);
-
   function closeModal() {
     setIsOpen(false);
   }
@@ -39,10 +36,6 @@ const Header = () => {
       path: "/#about",
     },
 
-    {
-      name: "How it works",
-      path: "/#features",
-    },
     {
       name: "Screenshots",
       path: "/#screenshots",
@@ -91,7 +84,7 @@ const Header = () => {
               : "hidden"
           }
         >
-          <div className="fixed inset-0 flex items-center justify-center">
+          {/* <div className="fixed inset-0 flex items-center justify-center">
             <button
               type="button"
               onClick={openModal}
@@ -99,77 +92,83 @@ const Header = () => {
             >
               Open dialog
             </button>
-          </div>
+          </div> */}
 
-          <Transition appear show={isOpen} as={Fragment}>
-            <Dialog as="div" className="relative z-20" onClose={closeModal}>
-              <Transition.Child
-                as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-              >
-                <div className="fixed inset-0 bg-black bg-opacity-25" />
-              </Transition.Child>
+          <div className="md:hidden">
+            <Transition appear show={isOpen} as={Fragment}>
+              <Dialog as="div" className="relative z-20" onClose={closeModal}>
+                <Transition.Child
+                  as={Fragment}
+                  enter="ease-out duration-300"
+                  enterFrom="opacity-0"
+                  enterTo="opacity-100"
+                  leave="ease-in duration-200"
+                  leaveFrom="opacity-100"
+                  leaveTo="opacity-0"
+                >
+                  <div className="fixed inset-0 bg-black bg-opacity-25" />
+                </Transition.Child>
 
-              <div className="fixed inset-0 overflow-y-auto">
-                <div className="flex h-screen items-center justify-center p-4 text-center">
-                  <Transition.Child
-                    as={Fragment}
-                    enter="ease-out duration-300"
-                    enterFrom="opacity-0 scale-95"
-                    enterTo="opacity-100 scale-100"
-                    leave="ease-in duration-200"
-                    leaveFrom="opacity-100 scale-100"
-                    leaveTo="opacity-0 scale-95"
-                  >
-                    <Dialog.Panel className="w-full max-w-md transform  rounded-2xl bg-white px-6 h-full text-left align-middle shadow-xl transition-all">
-                      <ul className="">
-                        {menu.map((item, index) => (
-                          <li className="py-6" key={index} onClick={closeModal}>
-                            <a href={item.path}>{item.name}</a>
-                          </li>
-                        ))}
-                      </ul>
-                      <div className="icons flex flex-col gap-5 my-5 ">
-                        <a
-                          href="#"
-                          className="flex flex-row items-center   rounded-md  -green-500 px-1 py-1 mb-10 text-green-600 text-2xl gap-1"
-                        >
-                          <FaGooglePlay />
-                          <span className="text-xl font-semibold">
-                            Google Play
-                          </span>
-                        </a>
-                        <a
-                          href="#"
-                          className="flex flex-row items-center font-bold   rounded-md  -green-500 px-1 py-1 text-green-600 text-2xl gap-1"
-                        >
-                          <FaAppStore />
-                          <span className="text-xl font-semibold">
-                            AppStore
-                          </span>
-                        </a>
-                      </div>
+                <div className="fixed inset-0 overflow-y-auto">
+                  <div className="flex h-screen items-center justify-center p-4 text-center">
+                    <Transition.Child
+                      as={Fragment}
+                      enter="ease-out duration-300"
+                      enterFrom="opacity-0 scale-95"
+                      enterTo="opacity-100 scale-100"
+                      leave="ease-in duration-200"
+                      leaveFrom="opacity-100 scale-100"
+                      leaveTo="opacity-0 scale-95"
+                    >
+                      <Dialog.Panel className="w-full max-w-md transform  rounded-2xl bg-white px-6 h-full text-left align-middle shadow-xl transition-all">
+                        <ul className="">
+                          {menu.map((item, index) => (
+                            <li
+                              className="py-6"
+                              key={index}
+                              onClick={closeModal}
+                            >
+                              <a href={item.path}>{item.name}</a>
+                            </li>
+                          ))}
+                        </ul>
+                        <div className="icons flex flex-col gap-5 my-5 ">
+                          <a
+                            href="#"
+                            className="flex flex-row items-center   rounded-md  -green-500 px-1 py-1 mb-10 text-green-600 text-2xl gap-1"
+                          >
+                            <FaGooglePlay />
+                            <span className="text-xl font-semibold">
+                              Google Play
+                            </span>
+                          </a>
+                          <a
+                            href="#"
+                            className="flex flex-row items-center font-bold   rounded-md  -green-500 px-1 py-1 text-green-600 text-2xl gap-1"
+                          >
+                            <FaAppStore />
+                            <span className="text-xl font-semibold">
+                              AppStore
+                            </span>
+                          </a>
+                        </div>
 
-                      <div className="mt-4">
-                        <button
-                          type="button"
-                          className="inline-flex absolute top-2 right-2 justify-center rounded-full    -transparent bg-blue-100 px-2 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                          onClick={closeModal}
-                        >
-                          <XMarkIcon className="w-8 h-8 text-black mx-5" />
-                        </button>
-                      </div>
-                    </Dialog.Panel>
-                  </Transition.Child>
+                        <div className="mt-4">
+                          <button
+                            type="button"
+                            className="inline-flex absolute top-2 right-2 justify-center rounded-full    -transparent bg-blue-100 px-2 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                            onClick={closeModal}
+                          >
+                            <XMarkIcon className="w-8 h-8 text-black mx-5" />
+                          </button>
+                        </div>
+                      </Dialog.Panel>
+                    </Transition.Child>
+                  </div>
                 </div>
-              </div>
-            </Dialog>
-          </Transition>
+              </Dialog>
+            </Transition>
+          </div>
           <div className="flex items-center flex-col justify-center py-5"></div>
         </div>
       </div>

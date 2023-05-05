@@ -25,25 +25,9 @@ const Screenshots = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={3}
-          //  autoplay={true}
           navigation={true}
           className="mx-20  "
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
-          {/* {data?.map((item) => {
-            return (
-              <SwiperSlide key={item.name}>
-                <div className="w-full flex flex-col md:flex-row px-10  items-center justify-center">
-                  <div className="w-44 h-44 rounded-full shadow-md shadow-black  " />
-                  <div className="p-2 md:w-3/5 w-full ">
-                    {item.message}
-                    <div>{item.name}</div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })} */}
           <SwiperSlide>
             <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
               <div className="">
@@ -79,25 +63,9 @@ const Screenshots = () => {
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={1}
-          //  autoplay={true}
           navigation={true}
           className="mx-20  "
-          // onSlideChange={() => console.log("slide change")}
-          // onSwiper={(swiper) => console.log(swiper)}
         >
-          {/* {data?.map((item) => {
-            return (
-              <SwiperSlide key={item.name}>
-                <div className="w-full flex flex-col md:flex-row px-10  items-center justify-center">
-                  <div className="w-44 h-44 rounded-full shadow-md shadow-black  " />
-                  <div className="p-2 md:w-3/5 w-full ">
-                    {item.message}
-                    <div>{item.name}</div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })} */}
           <SwiperSlide>
             <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
               <div className="">
