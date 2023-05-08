@@ -5,10 +5,9 @@ const client = createClient({
   accessToken: "vQVEAwb4ziceJf4VNTG5uBp7dXi7roTbidpHfCZ3N60",
 });
 
-export const getBlogPosts = async () => {
+export const getAbout = async () => {
   const response = await client.getEntries({
     content_type: "about",
-    field: "pics",
   });
 
   return response.items;

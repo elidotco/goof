@@ -3,7 +3,12 @@ import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "../photos";
-const About = () => {
+import { getGallery, getLinks, getSteps } from "../servicees";
+
+const About = ({ gallery, steps }) => {
+  console.log(steps);
+  console.log(gallery);
+  console.log(photos);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -19,16 +24,16 @@ const About = () => {
   return (
     <div id="about">
       <div className="flex flex-col-reverse md:flex-row my-10 lg:px-10 px-5 h-full">
-        <div className="images w-full md:w-3/6 h-full  ">
-          <Gallery photos={photos} onClick={openLightbox} />
+        <div className="images w-full md:w-3/6 h-inherit  ">
+          <Gallery photos={gallery} onClick={openLightbox} />
           <ModalGateway>
             {viewerIsOpen ? (
               <Modal onClose={closeLightbox}>
                 <Carousel
                   currentIndex={currentImage}
-                  views={photos.map((x) => ({
+                  views={gallery.map((x) => ({
                     ...x,
-                    srcset: x.srcSet,
+
                     caption: x.title,
                   }))}
                 />

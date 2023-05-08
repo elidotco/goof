@@ -5,10 +5,23 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
-import getBlogPosts, { getGallery } from "../servicees";
+import getAbout, { getGallery, getSteps } from "../servicees";
 
-export default function Home({ gallery }) {
-  console.log(gallery[0].fields.pics);
+export default function Home({ props }) {
+  console.log(props);
+  // console.log(gallery[0].fields.pics[1].fields);
+  // const gal = gallery[0].fields.pics.map((item, index) => {
+  //   const gallery = [];
+
+  //   if (index === 0) {
+  //     return { src: item.fields.file.url, width: 4, height: 3 };
+  //   } else if (index === 1) {
+  //     return { src: item.fields.file.url, width: 1, height: 1 };
+  //   } else if (index > 1) {
+  //     return { src: item.fields.file.url, width: 3, height: 4 };
+  //   }
+  //   return item.fields.file.url;
+  // });
   return (
     <div className="">
       <Head>
@@ -18,7 +31,7 @@ export default function Home({ gallery }) {
       </Head>
       <Header />
       <Hero />
-      <About />
+      {/* <About gallery={gal} /> */}
       <Feature />
       <Screenshots />
       <Reviews />
