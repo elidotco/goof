@@ -1,35 +1,222 @@
-import { createClient } from "contentful";
+import { request, gql } from "graphql-request";
+const graphqlAPI = process.env.NEXT_PUBLIC_BLOG_ENDPOINT;
 
-const client = createClient({
-  space: "bv8s22fow9gd",
-  accessToken: "vQVEAwb4ziceJf4VNTG5uBp7dXi7roTbidpHfCZ3N60",
-});
+export const getPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      aboutTheApps {
+        id
+        steps
+        about {
+          text
+        }
+        image {
+          fileName
+          id
+          url
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
 
-export const getAbout = async () => {
-  const response = await client.getEntries({
-    content_type: "about",
-  });
-
-  return response.items;
+  return result.aboutTheApps;
 };
-export const getSteps = async () => {
-  const response = await client.getEntries({
-    content_type: "steps",
-  });
 
-  return response.items;
-};
-export const getGallery = async () => {
-  const response = await client.getEntries({
-    content_type: "gallery",
-  });
+export const getrecentPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      galleries {
+        images {
+          id
+          url
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
 
-  return response.items;
+  return result.galleries;
 };
+
+export const getCategories = async () => {
+  const query = gql`
+    query GetCatgories {
+      categories {
+        name
+        slug
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result.categories;
+};
+
+export const getPostDetails = async (slug) => {
+  const query = gql`
+    query GetPostDetails($slug: String!) {
+      post(where: { slug: $slug }) {
+        author {
+          bio
+          name
+          id
+          image {
+            url
+          }
+        }
+        excerpt
+        createdAt
+        featuredPost
+        featuredImage {
+          url
+        }
+        title
+        slug
+        content {
+          raw
+        }
+
+        categories {
+          slug
+          name
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.post;
+};
+
+export const submitComment = async (obj) => {
+  const results = await fetch("/api/comments", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(obj),
+  });
+  return results.json();
+};
+
+export const getComments = async () => {
+  const query = gql`
+    query MyQuery {
+      comments {
+        comment
+        id
+        name
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result.comments;
+};
+
+export const getAdjacentPosts = async (createdAt, slug) => {
+  const query = gql`
+    query GetAdjacentPosts($createdAt: DateTime!, $slug: String!) {
+      next: posts(
+        first: 1
+        orderBy: createdAt_ASC
+        where: { slug_not: $slug, AND: { createdAt_gte: $createdAt } }
+      ) {
+        title
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+      }
+      previous: posts(
+        first: 1
+        orderBy: createdAt_DESC
+        where: { slug_not: $slug, AND: { createdAt_lte: $createdAt } }
+      ) {
+        title
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug, createdAt });
+
+  return { next: result.next[0], previous: result.previous[0] };
+};
+
+export const getFeaturedPosts = async () => {
+  const query = gql`
+    query GetCategoryPost() {
+      posts(where: {featuredPost: true}) {
+        author {
+          name
+          image {
+            url
+          }
+        }
+        featuredImage {
+          url
+        }
+        title
+        slug
+        createdAt
+      }
+    }   
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.posts;
+};
+
 export const getLinks = async () => {
-  const response = await client.getEntries({
-    content_type: "links",
-  });
+  const query = gql`
+    query MyQuery {
+      linkss {
+        playStore
+        appStore
+      }
+    }
+  `;
 
-  return response.items;
+  const result = await request(graphqlAPI, query);
+
+  return result.linkss;
+};
+export const getHero = async () => {
+  const query = gql`
+    query MyQuery {
+      heroSections {
+        title
+        description
+        image {
+          url
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.heroSections;
+};
+export const getScreenshot = async () => {
+  const query = gql`
+    query MyQuery {
+      screenshotss {
+        image {
+          url
+          id
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.screenshotss;
 };

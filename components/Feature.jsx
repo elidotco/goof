@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 
-const Feature = () => {
+const Feature = ({ props, image }) => {
   return (
     <div id="features" className="w-full h-full bg-green-400 text-white">
       <div className="flex flex-row">
@@ -16,28 +16,31 @@ const Feature = () => {
             <div className="text-lg p-5 my-10">
               <p className="font-semibold text-2xl">Download for Free</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
-                explicabo, obcaecati dolorum!
+                explicabo, obcaecati dolorum! */}
+                {props[0]}
               </p>
             </div>
             <div className="text-lg p-5 my-10">
               <p className="font-semibold text-2xl">Create a Profile</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
-                explicabo, obcaecati dolorum!
+                explicabo, obcaecati dolorum! */}
+                {props[1]}
               </p>
             </div>
             <div className="text-lg p-5 my-10">
               <p className="font-semibold text-2xl">Get your Meal</p>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
-                explicabo, obcaecati dolorum!
+                explicabo, obcaecati dolorum! */}
+                {props[2]}
               </p>
             </div>
           </div>
@@ -47,7 +50,7 @@ const Feature = () => {
             className="w-4/5 h-5/6  
           "
           >
-            <img src="/images/temp.png" alt="temp" className="w-full h-full" />
+            <img src={image} alt="temp" className="w-full h-full" />
           </div>
         </div>
       </div>

@@ -23,6 +23,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 import { db } from "../firebase";
+import ReviewForm from "./ReviewForm";
 
 const Footer = () => {
   const [oo, setOo] = useState([]);
@@ -104,10 +105,10 @@ const Footer = () => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-black bg-opacity-25" />
+            <div className="fixed  inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
 
-          <div className="fixed inset-0 overflow-y-auto">
+          <div className="fixed inset-0  overflow-y-auto">
             <div className="flex h-screen items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
@@ -120,60 +121,7 @@ const Footer = () => {
               >
                 <Dialog.Panel className="w-full max-w-md transform  rounded-2xl bg-white px-6 h-full text-left align-middle shadow-xl transition-all">
                   {" "}
-                  <div className="flex flex-col  items-center justify-center w-full  my-10 px-5 py-10">
-                    <div className="  h-12 text-lg rounded-full w-full ">
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        id=""
-                        className="w-full rounded-full px-4 h-full outline-none "
-                      />
-                    </div>
-
-                    <div className="  h-10 my-5 w-full  rounded-full">
-                      <input
-                        className="w-full rounded-full px-4 h-full outline-none "
-                        type="text"
-                        name="name"
-                        id=""
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div className="w-full ">
-                      <textarea
-                        type="text"
-                        name="name"
-                        id=""
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        className="w-full h-56   p-5 text-lg rounded-lg outline-none"
-                        placeholder="Message"
-                      />
-                    </div>
-
-                    <div>
-                      <div
-                        className="w-32 h-12 flex items-center justify-center px-3 py-1 rounded-full bg-green-500 cursor-pointer"
-                        onClick={handlesub}
-                      >
-                        Submit
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4">
-                    <button
-                      type="button"
-                      className="inline-flex absolute top-2 right-2 justify-center rounded-full    -transparent bg-blue-100 px-2 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
-                      onClick={closeModal}
-                    >
-                      <XMarkIcon className="w-8 h-8 text-black mx-5" />
-                    </button>
-                  </div>
+                  <ReviewForm close={closeModal} />
                 </Dialog.Panel>
               </Transition.Child>
             </div>

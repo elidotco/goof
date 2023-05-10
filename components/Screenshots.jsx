@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import "swiper/css/navigation";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 
-const Screenshots = () => {
+const Screenshots = ({ screen }) => {
   return (
     <div id="screenshots" className="w-full h-[700px]">
       <div>
@@ -28,34 +28,17 @@ const Screenshots = () => {
           navigation={true}
           className="mx-20  "
         >
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
+          {screen.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
+                  <div className="">
+                    <img src={item.image.url} alt="temp" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
       <div className="py-5 px-10  md:hidden">
@@ -66,34 +49,17 @@ const Screenshots = () => {
           navigation={true}
           className="mx-20  "
         >
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
-              <div className="">
-                <img src="/images/temp.png" alt="temp" />
-              </div>
-            </div>
-          </SwiperSlide>
+          {screen.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
+                  <div className="">
+                    <img src={item.image.url} alt="temp" />
+                  </div>
+                </div>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
     </div>

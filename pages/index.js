@@ -5,23 +5,44 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import styles from "../styles/Home.module.css";
-import getAbout, { getGallery, getSteps } from "../servicees";
+import getAbout, {
+  getPosts,
+  getrecentPosts,
+  getScreenshot,
+  getComments,
+  getLinks,
+  getHero,
+} from "../servicees";
 
-export default function Home({ props }) {
-  console.log(props);
+export default function Home({
+  posts,
+  gallery,
+  comment,
+  hero,
+  links,
+  screens,
+}) {
+  console.log(posts[0]);
+  console.log(hero);
+  console.log(links);
+
+  console.log(gallery[0]);
   // console.log(gallery[0].fields.pics[1].fields);
-  // const gal = gallery[0].fields.pics.map((item, index) => {
-  //   const gallery = [];
+  const gal = gallery[0].images.map((item, index) => {
+    const gallery = [];
 
-  //   if (index === 0) {
-  //     return { src: item.fields.file.url, width: 4, height: 3 };
-  //   } else if (index === 1) {
-  //     return { src: item.fields.file.url, width: 1, height: 1 };
-  //   } else if (index > 1) {
-  //     return { src: item.fields.file.url, width: 3, height: 4 };
-  //   }
-  //   return item.fields.file.url;
-  // });
+    if (index === 0) {
+      return { src: item.url, id: item.id, width: 4, height: 3 };
+    } else if (index === 1) {
+      return { src: item.url, id: item.id, width: 1, height: 1 };
+    } else if (index > 1) {
+      return { src: item.url, id: item.id, width: 3, height: 4 };
+    }
+    return item.fields.file.url;
+  });
+
+  console.log(gal);
+
   return (
     <div className="">
       <Head>
@@ -30,19 +51,26 @@ export default function Home({ props }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <Hero />
-      {/* <About gallery={gal} /> */}
-      <Feature />
-      <Screenshots />
-      <Reviews />
+      <Hero links={links[0]} text={hero[0]} />
+      <About gallery={gal} text={posts[0].about.text} />
+      <Feature props={posts[0].steps} image={posts[0].image.url} />
+      <Screenshots screen={screens} />
+      <Reviews comment={comment} />
       <Contact />
       <Footer />
     </div>
   );
 }
 
-Home.getInitialProps = async () => {
-  const gallery = await getGallery();
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  const gallery = (await getrecentPosts()) || [];
+  const links = (await getLinks()) || [];
+  const screens = (await getScreenshot()) || [];
+  const comment = (await getComments()) || [];
+  const hero = (await getHero()) || [];
 
-  return { gallery };
-};
+  return {
+    props: { posts, gallery, links, screens, comment, hero },
+  };
+}

@@ -50,7 +50,7 @@ const Header = () => {
       <div
         className={` h-full  flex justify-between items-center flex-row py-5 relative shadow-lg shadow-black md:shadow-none px-10 ${
           scrollTop > 40 ? "bg-black" : ""
-        }`}
+        } ${isOpen ? "hidden" : ""}`}
       >
         <div className="px-5 flex items-center text-white uppercase font-bold text-2xl">
           Go<span className="text-green-400">fo</span>od
@@ -84,19 +84,13 @@ const Header = () => {
               : "hidden"
           }
         >
-          {/* <div className="fixed inset-0 flex items-center justify-center">
-            <button
-              type="button"
-              onClick={openModal}
-              className="rounded-md bg-black bg-opacity-20 px-4 py-2 text-sm font-medium text-white hover:bg-opacity-30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
-            >
-              Open dialog
-            </button>
-          </div> */}
-
           <div className="md:hidden">
             <Transition appear show={isOpen} as={Fragment}>
-              <Dialog as="div" className="relative z-20" onClose={closeModal}>
+              <Dialog
+                as="div"
+                className="relative z-20 mt-50"
+                onClose={closeModal}
+              >
                 <Transition.Child
                   as={Fragment}
                   enter="ease-out duration-300"
@@ -120,7 +114,11 @@ const Header = () => {
                       leaveFrom="opacity-100 scale-100"
                       leaveTo="opacity-0 scale-95"
                     >
-                      <Dialog.Panel className="w-full max-w-md transform  rounded-2xl bg-white px-6 h-full text-left align-middle shadow-xl transition-all">
+                      <Dialog.Panel
+                        className="
+                      mt-30
+                      w-full max-w-md transform  rounded-2xl bg-white px-6 h-full text-left align-middle shadow-xl transition-all z-50"
+                      >
                         <ul className="">
                           {menu.map((item, index) => (
                             <li

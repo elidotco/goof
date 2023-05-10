@@ -5,9 +5,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "../photos";
 import { getGallery, getLinks, getSteps } from "../servicees";
 
-const About = ({ gallery, steps }) => {
-  console.log(steps);
-  console.log(gallery);
+const About = ({ gallery, text }) => {
   console.log(photos);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -54,7 +52,7 @@ const About = ({ gallery, steps }) => {
           {/* Passage Section */}
           <div className="md:p-5">
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              {/* Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Voluptate dicta sed dignissimos, cum est corrupti, mollitia
               voluptatibus at et numquam iusto! Necessitatibus, architecto
               neque. Nihil praesentium est aperiam ipsam provident. Lorem ipsum
@@ -65,7 +63,8 @@ const About = ({ gallery, steps }) => {
               consectetur adipisicing elit. Tempora ex amet, aliquid deserunt
               aspernatur quis eveniet dolor quam hic autem explicabo voluptatum
               labore necessitatibus fugiat! Repellendus dolorum nobis laborum
-              obcaecati.
+              obcaecati. */}
+              {text}
             </p>
           </div>
         </div>

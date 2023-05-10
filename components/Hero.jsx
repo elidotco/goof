@@ -3,7 +3,7 @@ import React from "react";
 import { AiFillApple } from "react-icons/ai";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 
-const Hero = () => {
+const Hero = ({ links, text }) => {
   return (
     <div className="hero h-full">
       <div className="absolute -top-[370px] right-0    rotate-180 rounded-t-full  bg-green-400 w-[950px] h-[950px]">
@@ -16,13 +16,15 @@ const Hero = () => {
       >
         <div className="z-10 w-full md:w-4/6 my-14">
           <p className="md:text-5xl text-3xl pt-20 animate__animated animate__backInLeft font-bold md:pl-20 md:px-20 text-white">
-            Awesome App that suits the morden lifestyle
+            {/* Awesome App that suits the morden lifestyle */}
+            {text.title}
           </p>
           <p className="py-2 animate__animated animate__backInLeft font-light text-white md:px-40 md:pl-20 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+            {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             quis facere quae recusandae impedit odio enim ducimus doloremque rem
             velit, minima, at vel, iure deleniti dolore nobis debitis aliquid
-            nesciunt!
+            nesciunt! */}
+            {text.description}
           </p>
           <div className="mt-5 md:flex hidden  gap-10 ml-20">
             <div
@@ -31,7 +33,7 @@ const Hero = () => {
               "
             >
               <a
-                href="#"
+                href={links.appStore}
                 className="flex-row flex items-center justify-between gap-x-2"
               >
                 <AiFillApple />
@@ -44,7 +46,7 @@ const Hero = () => {
               "
             >
               <a
-                href="#"
+                href={links.playStore}
                 className="flex-row flex items-center justify-between gap-x-2"
               >
                 <IoLogoGooglePlaystore />
@@ -55,11 +57,7 @@ const Hero = () => {
         </div>
 
         <div className="w-full z-10 md:w-2/6 h-[500px] ">
-          <img
-            src="/images/im/hero.png"
-            alt="alt"
-            className=" w-4/5 h-[500px]  "
-          />
+          <img src={text.image.url} alt="alt" className=" w-4/5 h-[500px]  " />
         </div>
       </div>
 
