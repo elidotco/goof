@@ -7,8 +7,9 @@ import "swiper/css/navigation";
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 
 const Screenshots = ({ screen }) => {
+  console.log(screen);
   return (
-    <div id="screenshots" className="w-full h-[700px]">
+    <div id="screenshots" className="w-full h-full">
       <div>
         <div className="flex items-center flex-col py-10 justify-center">
           <span
@@ -20,7 +21,7 @@ const Screenshots = ({ screen }) => {
           <div className="w-12 h-1 bg-orange-500" />
         </div>
       </div>
-      <div className="py-5 px-10 hidden md:flex">
+      <div className="py-5 px-10 hidden h-full md:flex">
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
@@ -31,9 +32,9 @@ const Screenshots = ({ screen }) => {
           {screen.map((item, index) => {
             return (
               <SwiperSlide key={index}>
-                <div className="w-full flex flex-col md:flex-row  items-center justify-center  ">
+                <div className="w-full flex flex-col md:flex-row  items-center justify-center border ">
                   <div className="">
-                    <img src={item.image.url} alt="temp" />
+                    <img src={item.image.url} className="h-full" alt="temp" />
                   </div>
                 </div>
               </SwiperSlide>

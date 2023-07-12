@@ -6,7 +6,7 @@ import { photos } from "../photos";
 import { getGallery, getLinks, getSteps } from "../servicees";
 
 const About = ({ gallery, text }) => {
-  console.log(photos);
+  console.log(gallery);
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
