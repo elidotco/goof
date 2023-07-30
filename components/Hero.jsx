@@ -6,10 +6,6 @@ import { IoLogoGooglePlaystore } from "react-icons/io5";
 const Hero = ({ links, text }) => {
   return (
     <div className="hero h-full">
-      <div className="absolute -top-[370px] right-0    rotate-180 rounded-t-full  bg-green-400 w-[950px] h-[950px]">
-        {/* <img src={line} alt="line" className="w-full" /> */}
-      </div>
-
       <div
         className="flex  items-center h-full md:h-[700px] md:flex-row justify-between  flex-col px-5 "
         id="home"
@@ -26,22 +22,23 @@ const Hero = ({ links, text }) => {
             nesciunt! */}
             {text.description}
           </p>
-          <div className="mt-5 md:flex hidden  gap-10 ml-20">
+          <div className="mt-12 md:flex hidden   gap-10 ml-20">
             <div
-              className="32 items-center h-12 flex flex-row  px-6 py-3 
-                 rounded-full bg-green-400 text-white text-xl
+              className="32 items-center h-12 flex flex-row hover:bg-transparent hover:border hover:border-green-400 transition-all duration-150 hover:transition-all
+                px-6 py-3 
+                 rounded-full bg-green-400 cursor-pointer text-white text-xl
               "
             >
               <a
                 href={links.appStore}
                 className="flex-row flex items-center justify-between gap-x-2"
               >
-                <AiFillApple />
+                <AiFillApple size={35} />
                 Appstore
               </a>
             </div>
             <div
-              className="32 items-center border h-12 flex flex-row  px-6 py-3 
+              className="32 items-center border hover:border hover:border-green-400 transition-all duration-150 hover:transition-all cursor-pointer h-12 flex flex-row  px-6 py-3 
                  rounded-full   text-white text-xl
               "
             >
@@ -56,9 +53,9 @@ const Hero = ({ links, text }) => {
           </div>
         </div>
 
-        <div className="w-full z-10 md:w-2/6 h-[500px] ">
+        {/* <div className="w-full z-10 md:w-2/6 h-[500px] ">
           <img src={text.image.url} alt="alt" className=" w-4/5 h-[500px]  " />
-        </div>
+        </div> */}
       </div>
 
       {/* <div className=" -rotate-1 ml-20 mb-20">
