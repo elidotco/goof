@@ -21,24 +21,15 @@ const About = ({ gallery, text }) => {
   };
   return (
     <div id="about">
-      <div className="flex flex-col-reverse md:flex-row my-10 lg:px-10 px-5 h-full">
-        <div className="images w-full md:w-3/6 h-inherit  ">
-          <Gallery photos={gallery} onClick={openLightbox} />
-          <ModalGateway>
-            {viewerIsOpen ? (
-              <Modal onClose={closeLightbox}>
-                <Carousel
-                  currentIndex={currentImage}
-                  views={gallery.map((x) => ({
-                    ...x,
-
-                    caption: x.title,
-                  }))}
-                />
-              </Modal>
-            ) : null}
-          </ModalGateway>
+      <div className="flex justify-center items-center  flex-col-reverse md:flex-row my-10 lg:px-10 px-5 h-full">
+        <div className=" w-96 h-96 border rounded-full">
+          <img
+            src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg"
+            alt="image"
+            className="w-full h-full rounded-full"
+          />
         </div>
+
         <div className="images w-full md:w-3/6 h-full   px-5 md:px-10 py-5">
           <div>
             <span

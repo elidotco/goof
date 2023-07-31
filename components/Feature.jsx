@@ -5,7 +5,7 @@ const Feature = ({ props, image }) => {
   return (
     <div id="features" className="w-full h-full bg-[#FFFFFF]">
       <div className="  ">
-        <div className="w-full border   flex items-center justify-center flex-col h-full px-56">
+        <div className="w-full border   flex items-center justify-center flex-col h-full md:px-56 px-10">
           <div className="my-10">
             <span className="text-3xl font-semibold ">
               How Does This App Work ?
