@@ -37,10 +37,6 @@ const Header = () => {
     },
 
     {
-      name: "Screenshots",
-      path: "/#screenshots",
-    },
-    {
       name: "Testimonials",
       path: "/#reviews",
     },
