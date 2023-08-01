@@ -17,7 +17,6 @@ const Reviews = ({ comment }) => {
 
       <div className="py-5 px-10 hidden md:block">
         <Swiper
-          className="flex justify-center items-center"
           modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
           spaceBetween={50}
           slidesPerView={3}
