@@ -136,8 +136,8 @@ const Footer = () => {
               Go<span className="text-green-400">fo</span>od
             </div>
             <div className="py-5">
-              Go Waste is the brain child of Lac global limited as a means to
-              help Deliver health food Fast visit{" "}
+              GoFood is the brain child of Lac global limited as a means to help
+              Deliver health food Fast visit{" "}
               <a
                 href="https://www.lacgloballimited.com"
                 className="text-blue-400 cursor-pointer"
@@ -180,14 +180,14 @@ const Footer = () => {
               <a href="#"></a>
               <a href="#">Partner with us</a>
               <a
-                href="https://www.lacgloballimited.com/projects/gowasteterms"
+                href="https://www.lacgloballimited.com/projects/gofoodterms"
                 target="_blank"
                 rel="noreferrer"
               >
                 Terms and Conditions
               </a>
               <a
-                href="https://www.lacgloballimited.com/projects/wastepolicy"
+                href="https://www.lacgloballimited.com/projects/foodpolicy"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -49,7 +49,7 @@ const Header = () => {
         } ${isOpen ? "hidden" : ""}`}
       >
         <div className="px-5 flex items-center text-white uppercase font-bold text-2xl">
-          Go<span className="text-green-400">fo</span>od
+          Go<span className="">fo</span>od
         </div>
         <nav className=" flex items-center">
           <ul className="md:flex flex-row items-center gap-x-7 hidden px-7 bg-transparent ">

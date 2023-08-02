@@ -6,7 +6,7 @@ const Feature = ({ props, image }) => {
     <div id="features" className="w-full h-full bg-[#FFFFFF]">
       <div className="  ">
         <div className="w-full border   flex items-center justify-center flex-col h-full md:px-56 px-10">
-          <div className="my-10">
+          <div className="my-10 pt-10">
             <span className="text-3xl font-semibold ">
               How Does This App Work ?
             </span>
@@ -39,7 +39,7 @@ const Feature = ({ props, image }) => {
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
                 explicabo, obcaecati dolorum! */}
-                  {props[0]}
+                  {props[1]}
                 </p>
               </div>
             </div>
