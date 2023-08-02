@@ -187,7 +187,7 @@ const Footer = () => {
                 Terms and Conditions
               </a>
               <a
-                href="https://www.lacgloballimited.com/projects/foodpolicy"
+                href="https://www.lacgloballimited.com/projects/foodprivacy"
                 target="_blank"
                 rel="noreferrer"
               >
