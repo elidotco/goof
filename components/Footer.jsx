@@ -133,7 +133,7 @@ const Footer = () => {
         <div className="bg-black flex items-center flex-col px-10 gap-5 py-10 text-white md:justify-between md:flex-row">
           <div className="md:w-2/5 w-full">
             <div className="px-5 flex items-center text-white uppercase font-bold text-2xl">
-              Go<span className="">fo</span>od
+              Go<span className="text-white">fo</span>od
             </div>
             <div className="py-5">
               GoFood is the brain child of Lac global limited as a means to help
