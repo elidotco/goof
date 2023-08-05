@@ -195,7 +195,9 @@ const Footer = () => {
               </a>
             </div>
             <div>
-              <p>info@lacgloballimited.com</p>
+              <a href="mailto:gofood@lacgloballimited">
+                gofood@lacgloballimited.com
+              </a>
               <p>number</p>
               <span className="cursor-pointer" onClick={openModal}>
                 Write a review
