@@ -198,7 +198,7 @@ const Footer = () => {
               <a href="mailto:gofood@lacgloballimited.com">
                 gofood@lacgloballimited.com
               </a>
-              <p>number</p>
+              <p>+49 1520 5284562</p>
               <span className="cursor-pointer" onClick={openModal}>
                 Write a review
               </span>
