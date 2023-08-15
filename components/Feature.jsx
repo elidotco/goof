@@ -59,7 +59,7 @@ const Feature = ({ props, image }) => {
               <img src={image} alt="" />
             </div>
           </div>
-          <div className="text-lg p-5 my-10 flex flex-row items-center gap-40">
+          <div className="text-lg p-5 my-10 flex flex-row-reverse items-center gap-40">
             <div className="">
               <p className="font-semibold text-2xl">Enjoy your meal</p>
               <p>
