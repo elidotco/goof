@@ -193,6 +193,7 @@ const Footer = () => {
               >
                 Privacy Policy
               </a>
+              <a href="/impressum">Impressum</a>
             </div>
             <div>
               <a href="mailto:gofood@lacgloballimited.com">
