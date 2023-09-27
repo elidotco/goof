@@ -25,7 +25,7 @@ const Feature = ({ props, image }) => {
               </p>
             </div>
             <div className="hidden md:flex">
-              <img src={image} alt="" />
+              <img src={image} alt="" className="w-[800px] h-full" />
             </div>
           </div>
           <div className="text-lg p-5 my-10 flex flex-row-reverse items-center gap-40 ">
@@ -36,11 +36,11 @@ const Feature = ({ props, image }) => {
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
                 explicabo, obcaecati dolorum! */}
-                {props[0]}
+                {props[1]}
               </p>
             </div>
             <div className="hidden md:flex">
-              <img src={image} alt="" />
+              <img src={image} alt="" className="w-[800px] h-full" />
             </div>
           </div>
 
@@ -52,11 +52,11 @@ const Feature = ({ props, image }) => {
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
                 explicabo, obcaecati dolorum! */}
-                {props[0]}
+                {props[2]}
               </p>
             </div>
             <div className="hidden md:flex border">
-              <img src={image} alt="" />
+              <img src={image} alt="" className="w-[800px] h-full" />
             </div>
           </div>
           <div className="text-lg p-5 my-10 flex flex-row-reverse items-center gap-40">
@@ -67,11 +67,11 @@ const Feature = ({ props, image }) => {
                 accusantium in vitae tenetur quos fuga quia modi nulla minus
                 saepe, dolor eligendi reiciendis laboriosam, soluta illo officia
                 explicabo, obcaecati dolorum! */}
-                {props[0]}
+                {props[3]}
               </p>
             </div>
             <div className="hidden md:flex border">
-              <img src={image} alt="" />
+              <img src={image} alt="" className="w-[800px] h-full" />
             </div>
           </div>
         </div>
